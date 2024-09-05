@@ -15,6 +15,8 @@
             {%- set show_pages = section.pages -%}
         {% endif -%}
 
+        <p>Click a post's timestamp to see the full post.</p>
+
         {{ post_macros::list_posts(pages=show_pages, extra=config.extra) }}
     </main>
 

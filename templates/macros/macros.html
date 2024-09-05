@@ -50,12 +50,18 @@
                     {% set hide_read_more = true %}
                 {% endif %}
                 -->
-                {{ page.content | safe }}
+                {% if page.summary %}
+                    {{ page.summary | safe }}
+                {% else %}
+                    {{ page.content | safe }}
+                {% endif %}
             </div>
 
+            <!--
             {% if not hide_read_more %}
                 <a class="readmore" href={{ page.permalink }}>{{ extra.translations[lang][0].show_more }}</a>
             {% endif %}
+            -->
         </section>
 
     {% endfor -%}
