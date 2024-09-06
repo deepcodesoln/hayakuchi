@@ -27,7 +27,7 @@
         {% endif %}
 
         <section class="list-item">
-            <h1 class="title">
+            <h1 class="blog-post-title">
               <a class="title" href={{ page.permalink }}>{{ page.date | date(format="%Y-%m-%d %H:%M") }}</a>
             </h1>
 
@@ -91,7 +91,12 @@
 <main>
     <article>
         <div class="title">
-            <h1 class="title">{{ page.date | date(format="%Y-%m-%d %H:%M") }}</h1>
+            {% if page.extra.show_full_title %}
+              <h1 class="section-title">{{ page.title }}</h1>
+              <p class="date-as-version">v. {{ page.date | date(format="%Y-%m-%d %H:%M") }}</p>
+            {% else %}
+              <h1 class="blog-post-title">{{ page.date | date(format="%Y-%m-%d %H:%M") }}</h1>
+            {% endif %}
 
 
             <div class="meta">

@@ -48,6 +48,10 @@ p {
   line-height: 1.5;
 }
 
+p.date-as-version {
+  color: gray;
+}
+
 hr {
   border: 0;
   border-top: 3px dotted var(--bordercl);
@@ -188,16 +192,24 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   margin-top: 2em;
 }
 
-h1.title {
+h1.section-title {
+  font-size: 1.3rem;
+}
+
+h1.section-title::before {
+  content: "";
+}
+
+h1.blog-post-title {
   font-size: 1.0rem;
   color: gray;
 }
 
-h1.title::before {
+h1.blog-post-title::before {
   content: "¶ ";
 }
 
@@ -442,9 +454,8 @@ table {
 }
 
 table th {
-  padding: 6px 13px;
+  padding: 5px 5px;
   border: 1px solid #dfe2e5;
-  font-size: large;
 }
 
 table td {
