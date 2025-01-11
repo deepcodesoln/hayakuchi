@@ -17,7 +17,7 @@
             {%- set show_pages = section.pages -%}
         {% endif -%}
 
-        <p>Click a post's timestamp to see the full post.</p>
+        <p>Click a post's timestamp to see the full post. Find the atom feed <a href={{ get_url(path="blog/atom.xml", trailing_slash=false) }}>here</a>.</p>
 
         {{ post_macros::list_posts(pages=show_pages, extra=config.extra) }}
     </main>
