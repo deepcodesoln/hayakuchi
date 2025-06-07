@@ -7,7 +7,7 @@
     {% endfor %}
   </div>
   <div class="footer-info">
-    {{ now() | date(format="%Y") }} &copy; {{ config.extra.copyright }}
+    &copy; {{ now() | date(format="%Y") }} {{ config.extra.copyright }}
   </div>
 </footer>
 

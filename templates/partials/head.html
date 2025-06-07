@@ -1,9 +1,6 @@
 <header>
-    <div class="main" id="main_title">
-        <a href={{ config.base_url }}>{{ config.title }}</a>
-    </div>
-
     <nav>
+        <a href={{ config.base_url }}>home</a> |
         {% for menu in config.extra.translations[lang][0].menus %}
           {% if loop.index0 > 0 %} | {% endif %}
           {% if menu.url is starting_with("https://") %}
@@ -12,7 +9,6 @@
             <a href={{ config.base_url }}/{{ menu.url }}>{{ menu.name }}</a>
           {% endif %}
         {% endfor %}
-        <!-- | <a href={{ get_url(path="atom.xml", trailing_slash=false) }}>atom</a> -->
 
         <!--
         {% if config.extra.translations.languages %}
