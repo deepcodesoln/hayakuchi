@@ -241,15 +241,6 @@ h1.section-title::before {
   content: "";
 }
 
-h1.blog-post-title {
-  font-size: 1.0rem;
-  color: gray;
-}
-
-h1.blog-post-title::before {
-  content: "¶ ";
-}
-
 .meta {
   color: #999;
   letter-spacing: -0.5px;

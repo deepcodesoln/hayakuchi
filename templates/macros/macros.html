@@ -16,20 +16,15 @@
 {% endmacro list_title %}
 
 {% macro list_posts(pages, extra) %}
-    <ul>
     {%- for page in pages %}
         {%- if page.draft %}
             {% continue %}
         {% endif -%}
 
-        {% if loop.index > 1 %}
         <hr class="post-divider"/>
-        {% endif %}
 
-        <section class="list-item">
-            <h1 class="blog-post-title">
-              <a class="title" href={{ page.permalink }}>{{ page.date | date(format="%Y-%m-%d %H:%M") }}</a>
-            </h1>
+        <section>
+            <a href={{ page.permalink }}>{{ page.date | date(format="%Y-%m-%d %H:%M") }}</a>
 
             <!-- <time>{{ page.date | date(format="%Y-%m-%d %H:%M") }}</time> -->
             <!-- <span>| {{ page.reading_time }} {{ config.extra.translations[lang][0].read_time }}</span> -->
@@ -65,7 +60,6 @@
         </section>
 
     {% endfor -%}
-    </ul>
 {% endmacro list_posts %}
 
 
