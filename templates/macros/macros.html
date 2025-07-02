@@ -90,7 +90,7 @@
               <p class="date-as-version">v. {{ page.date | date(format="%Y-%m-%d %H:%M") }}</p>
             {% else %}
               <h1 class="blog-post-title">{{ page.title }}</h1>
-              <p>{{ page.date | date(format="%H:%M:%S") }}</p>
+              <p>{{ page.date | date(format="%H:%M:%S") }}, <a href={{ get_url(path="blog/atom.xml", trailing_slash=false) }}>atom feed</a>.</p>
             {% endif %}
 
 
